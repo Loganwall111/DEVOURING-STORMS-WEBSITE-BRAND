@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MASSG Add-On — Devouring Storms Studios</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    .massg-hero {
+      padding-top: 64px;
+      background: linear-gradient(to bottom, rgba(0,212,255,0.07) 0%, transparent 100%);
+      border-bottom: 1px solid rgba(0,212,255,0.2);
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+    .massg-hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2.5rem,7vw,5rem);
+      letter-spacing: 8px;
+      color: #00d4ff;
+      text-shadow: 0 0 40px #00d4ff, 0 0 80px rgba(0,212,255,0.4);
+      padding-top: 2.5rem;
+    }
+    .massg-hero p {
+      color: var(--text-dim);
+      letter-spacing: 3px;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .massg-hero .skull {
+      font-size: 5rem;
+      display: block;
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 0 20px #00d4ff);
+      animation: skullFloat 3s ease-in-out infinite;
+    }
+    @keyframes skullFloat {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-12px); }
+    }
+
+    /* Feature cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: var(--storm-card);
+      border: 1px solid var(--storm-border);
+      border-left: 4px solid #00d4ff;
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      border-color: #00d4ff;
+      box-shadow: 0 0 25px rgba(0,212,255,0.2);
+      transform: translateY(-3px);
+    }
+    .feature-card .f-icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+    .feature-card h3 {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: #00d4ff;
+      margin-bottom: 0.7rem;
+    }
+    .feature-card p { color: var(--text-dim); font-size: 0.88rem; line-height: 1.7; }
+
+    /* OS teaser block */
+    .os-teaser {
+      background: linear-gradient(135deg, #020510 0%, #030918 100%);
+      border: 2px solid rgba(0,212,255,0.3);
+      border-radius: 12px;
+      padding: 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .os-teaser::before {
+      content: '';
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(0,212,255,0.02) 3px,rgba(0,212,255,0.02) 4px);
+      pointer-events: none;
+    }
+    .os-teaser h2 {
+      font-family: var(--font-mono);
+      font-size: clamp(1.2rem,3vw,2rem);
+      color: #00d4ff;
+      letter-spacing: 6px;
+      text-shadow: 0 0 20px #00d4ff;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .os-teaser p {
+      color: rgba(153,128,204,0.8);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.8;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .os-teaser .fake-terminal {
+      background: #010a14;
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .ft-line { margin-bottom: 5px; }
+    .ft-line.ok   { color: #00ff88; }
+    .ft-line.sys  { color: #00d4ff; }
+    .ft-line.warn { color: #ffaa00; }
+    .ft-line.err  { color: #ff4444; }
+    .ft-line.dim  { color: #334466; }
+    .ft-line.blink::after { content: '█'; animation: cur 1s step-end infinite; }
+    @keyframes cur { 0%,100%{opacity:1} 50%{opacity:0} }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="series.html">THE SERIES</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="massg.html" class="active">MASSG</a></li>
+      <li><a href="lore.html">LORE</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="massg-hero">
+    <span class="skull">💀</span>
+    <h1>MASSG</h1>
+    <p>MULTIVERSE AUTOMATED STORM-SUPPRESSION GRID — ADD-ON &amp; JAVA MOD</p>
+  </div>
+
+  <!-- WHAT IS MASSG -->
+  <section>
+    <div class="content-box" style="border-left:4px solid #00d4ff; max-width:900px;">
+      <p style="font-size:1.1rem; color:var(--text-main);">
+        <strong style="color:#00d4ff;">MASSG</strong> is a Minecraft Add-On (Bedrock Edition) and Java Mod created by <strong>Logan Wall (@REWRITTENTM)</strong>. It brings the in-universe MASSG Operating System directly into Minecraft — custom mobs, mechanics, items, and lore tied to every block of the Devouring Storms universe.
+      </p>
+      <p>
+        The mod isn't just a gameplay expansion — it's a narrative artifact. Installing it makes you a participant in the story. Every play session is canon. The MASSG entity watches.
+      </p>
+      <p>
+        Available for <strong style="color:#00d4ff;">Minecraft Bedrock Edition</strong> (Add-On) and <strong style="color:#00d4ff;">Java Edition</strong> (Mod). Both in active development.
+      </p>
+    </div>
+
+    <!-- Official Trailer -->
+    <div style="max-width:900px; margin:0 auto 4rem;">
+      <div class="video-glow-frame" style="border-color:rgba(0,212,255,0.4); box-shadow:0 0 40px rgba(0,212,255,0.15);">
+        <iframe width="100%" height="480"
+          src="https://www.youtube.com/embed/FBxWsA4gYxY?rel=0&modestbranding=1"
+          title="MASSG ADD-ON / JAVA MOD — OFFICIAL TRAILER"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center; color:var(--text-dim); margin-top:1rem; font-size:0.82rem; letter-spacing:2px; font-family:var(--font-mono);">
+        ▲ MASSG ADD-ON / JAVA MOD — OFFICIAL TRAILER
+      </p>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="section-header">
+      <h2 class="section-title" style="color:#00d4ff;">WHAT'S IN THE MOD</h2>
+      <div class="section-line" style="background:linear-gradient(90deg,transparent,#00d4ff,transparent);"></div>
+    </div>
+    <div class="feature-grid" style="margin-bottom:4rem;">
+      <div class="feature-card">
+        <span class="f-icon">🌀</span>
+        <h3>DIMENSIONAL MECHANICS</h3>
+        <p>Custom dimensions tied to the Devouring Storms lore. Each dimension represents a timeline in the Rewritten Multiverse — some stable, some already consumed by the storm.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">👾</span>
+        <h3>MASSG ENTITIES</h3>
+        <p>Custom mobs that embody the storm's influence. They behave differently depending on timeline stability. Some are enemies — some are echoes of characters from the series.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">🔧</span>
+        <h3>OS INTERFACE ITEMS</h3>
+        <p>In-game items that mirror the MASSG OS interface. Terminals, data drives, access cards — every item has a lore entry that deepens the story.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">📖</span>
+        <h3>FOURTH-WALL LORE</h3>
+        <p>The mod knows you're playing it. MASSG monitors every action. Lore entries react to what you do in-game. The line between player and character is intentionally blurred.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">☕</span>
+        <h3>JAVA EDITION</h3>
+        <p>Full Java Mod port — same experience, deeper integration with Java Edition's modding capabilities. Both versions are developed in parallel by Logan Wall.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">📱</span>
+        <h3>BEDROCK ADD-ON</h3>
+        <p>Full Bedrock Add-On — works on all platforms that run Bedrock Edition. Cross-platform compatible. Drop it into your world and the storm follows you in.</p>
+      </div>
+    </div>
+
+    <!-- OS TEASER — Vault CTA -->
+    <div class="section-header">
+      <h2 class="section-title" style="color:#00d4ff;">🖥️ MASSG OS — CLASSIFIED</h2>
+      <div class="section-line" style="background:linear-gradient(90deg,transparent,#00d4ff,transparent);"></div>
+    </div>
+    <div class="os-teaser">
+      <h2>💀 ACCESS REQUIRED</h2>
+      <div class="fake-terminal">
+        <div class="ft-line sys">MASSG OS v2.0 — REWRITTEN MULTIVERSE</div>
+        <div class="ft-line dim">——————————————————————————————</div>
+        <div class="ft-line ok">[OK] Storm protocols loaded</div>
+        <div class="ft-line ok">[OK] Multiverse bridge: ACTIVE</div>
+        <div class="ft-line warn">[WARN] Timeline integrity: 67%</div>
+        <div class="ft-line err">[DENY] OS desktop: LOCKED — clearance required</div>
+        <div class="ft-line dim">——————————————————————————————</div>
+        <div class="ft-line blink sys">Enter vault access code to launch OS_</div>
+      </div>
+      <p>
+        The full MASSG Operating System is hidden behind the Vault.<br/>
+        Moveable windows. A live terminal. Classified files. Storm sensor data.<br/>
+        You need the access code to get in.
+      </p>
+      <a href="vault.html" class="btn" style="border:2px solid #00d4ff; color:#00d4ff; font-size:1rem; padding:14px 36px; letter-spacing:4px; box-shadow:0 0 20px rgba(0,212,255,0.3);" onmouseover="this.style.background='rgba(0,212,255,0.12)'" onmouseout="this.style.background='transparent'">
+        💀 ENTER THE VAULT → LAUNCH OS
+      </a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/><span>DEVOURING STORMS STUDIOS</span></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a><a href="series.html">Series</a><a href="videos.html">Videos</a>
+        <a href="music.html">Music</a><a href="massg.html">MASSG</a><a href="lore.html">Lore</a>
+        <a href="news.html">News</a><a href="community.html">Community</a><a href="vault.html">💀 MASSG OS</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a>
+        <a href="#discord" class="social-btn dc">💬 Discord</a>
+      </div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>

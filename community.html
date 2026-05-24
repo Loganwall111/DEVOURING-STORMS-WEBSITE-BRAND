@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community — Devouring Storms Studios</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    .stat-row { display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; margin-bottom:3rem; }
+    .stat-box { background:var(--storm-card); border:1px solid var(--storm-border); border-radius:8px; padding:2rem 3rem; text-align:center; min-width:160px; }
+    .stat-box .num { font-family:var(--font-title); font-size:2.5rem; color:var(--storm-light-purple); display:block; text-shadow:var(--storm-glow); }
+    .stat-box .label { font-family:var(--font-mono); font-size:0.7rem; color:var(--text-dim); letter-spacing:3px; margin-top:0.3rem; }
+    .post-card { background:var(--storm-card); border:1px solid var(--storm-border); border-radius:8px; padding:1.8rem; margin-bottom:1.2rem; max-width:860px; margin-left:auto; margin-right:auto; transition:all 0.3s; }
+    .post-card:hover { border-color:var(--storm-purple); box-shadow:var(--storm-glow); }
+    .post-meta { display:flex; gap:1rem; align-items:center; margin-bottom:1rem; }
+    .post-avatar { width:40px;height:40px; border-radius:50%; border:2px solid var(--storm-purple); }
+    .post-author { font-family:var(--font-title); font-size:0.9rem; color:var(--storm-light-purple); letter-spacing:2px; }
+    .post-date { font-family:var(--font-mono); font-size:0.72rem; color:var(--text-dim); }
+    .post-card p { color:var(--text-dim); line-height:1.8; }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="series.html">THE SERIES</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="lore.html">LORE</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="community.html" class="active">COMMUNITY</a></li>
+      <li><a href="vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1 class="page-title">👥 COMMUNITY</h1>
+      <p class="page-subtitle">Join the Rewritten Multiverse — Devouring Storms Fans</p>
+    </div>
+  </div>
+
+  <section>
+    <!-- Stats -->
+    <div class="stat-row">
+      <div class="stat-box"><span class="num">388</span><div class="label">VIDEOS UPLOADED</div></div>
+      <div class="stat-box"><span class="num">144</span><div class="label">SUBSCRIBERS</div></div>
+      <div class="stat-box"><span class="num">2</span><div class="label">ALBUMS</div></div>
+      <div class="stat-box"><span class="num">7</span><div class="label">STORY ARCS</div></div>
+    </div>
+
+    <!-- Join Cards -->
+    <div class="section-header"><h2 class="section-title">JOIN THE MULTIVERSE</h2><div class="section-line"></div></div>
+    <div class="community-grid" style="max-width:1100px; margin:0 auto 4rem;">
+      <div class="community-card">
+        <span class="c-icon">▶️</span>
+        <h3>SUBSCRIBE ON YOUTUBE</h3>
+        <p>The main hub of all Devouring Storms content — 388 videos of songs, teasers, short films, trailers, and lore drops. New content drops regularly.</p>
+        <a href="https://www.youtube.com/@REWRITTENTM?sub_confirmation=1" target="_blank" class="btn btn-red">SUBSCRIBE NOW</a>
+      </div>
+      <div class="community-card" style="border-color:rgba(88,101,242,0.4);">
+        <span class="c-icon">💬</span>
+        <h3>JOIN THE DISCORD</h3>
+        <p>The community Discord server for Devouring Storms fans. Discuss lore, theories, the MASSG mod, and get early access to announcements. Server coming soon — drop link here.</p>
+        <a href="#discord" class="btn" style="border-color:#5865f2;color:#8899ff;">ADD DISCORD INVITE →</a>
+      </div>
+      <div class="community-card">
+        <span class="c-icon">🔒</span>
+        <h3>VAULT ACCESS</h3>
+        <p>Got the clearance code? The Vault contains classified lore files, the Final Storm Arc, and restricted content not available anywhere else. Alpha clearance required.</p>
+        <a href="vault.html" class="btn btn-red">🔒 ENTER THE VAULT</a>
+      </div>
+    </div>
+
+    <!-- Community Posts (YouTube-style) -->
+    <div class="section-header"><h2 class="section-title">📋 COMMUNITY POSTS</h2><div class="section-line"></div></div>
+    <div style="max-width:860px; margin:0 auto 4rem;">
+      <div class="post-card">
+        <div class="post-meta">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logan" class="post-avatar"/>
+          <div>
+            <div class="post-author">LOGAN WALL · @REWRITTENTM</div>
+            <div class="post-date">MAY 24, 2026</div>
+          </div>
+        </div>
+        <p>THE SERIES REVEAL TRAILER IS LIVE. 24 hours left — I'm Logan Wall a.k.a. Rewritten Team Member, creator of MASSG Mod and creator of Devouring Storms Series. We have been working on this for a long time. The Multiverse is open. 🌩️⚡</p>
+      </div>
+      <div class="post-card">
+        <div class="post-meta">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logan" class="post-avatar"/>
+          <div>
+            <div class="post-author">LOGAN WALL · @REWRITTENTM</div>
+            <div class="post-date">MAY 22, 2026</div>
+          </div>
+        </div>
+        <p>Album 2 — "Fight of the Darkness" is dropping. "Changed Forever" is out now. "A World of Broken Secrets (Rewritten Version)" is also live. Each song is a chapter — listen in order. 🎵🌌</p>
+      </div>
+      <div class="post-card">
+        <div class="post-meta">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logan" class="post-avatar"/>
+          <div>
+            <div class="post-author">LOGAN WALL · @REWRITTENTM</div>
+            <div class="post-date">MAY 18, 2026</div>
+          </div>
+        </div>
+        <p>Storm sensor update: 7 of 12 timelines consumed. MASSG containment is holding but the pressure is increasing. The Infinity Conflict is entering its final phase. Stay tuned for Arc 05 details — some things are only in the Vault. 💀🔒</p>
+      </div>
+      <div style="text-align:center; margin-top:1.5rem;">
+        <a href="https://www.youtube.com/@REWRITTENTM/community" target="_blank" class="btn btn-secondary">VIEW ALL POSTS ON YOUTUBE →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/><span>DEVOURING STORMS STUDIOS</span></div>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="series.html">Series</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="massg.html">MASSG OS</a><a href="lore.html">Lore</a><a href="news.html">News</a><a href="community.html">Community</a><a href="vault.html">Vault</a></div>
+      <div class="footer-social"><a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a><a href="#discord" class="social-btn dc">💬 Discord</a></div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>

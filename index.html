@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DEVOURING STORMS STUDIOS — Home</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="home-page">
+
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Devouring Storms Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="pages/series.html">THE SERIES</a></li>
+      <li><a href="pages/videos.html">VIDEOS</a></li>
+      <li><a href="pages/music.html">MUSIC</a></li>
+      <li><a href="pages/lore.html">LORE</a></li>
+      <li><a href="pages/news.html">NEWS</a></li>
+      <li><a href="pages/community.html">COMMUNITY</a></li>
+      <li><a href="pages/vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO with real YouTube channel banner -->
+  <section class="hero" id="hero">
+    <div class="hero-banner-container">
+      <img
+        src="https://yt3.googleusercontent.com/f9KiRTpvpY_8gNgU1qKDf3MlZiB0bGPxR2TBTNzX_8qiU1K4CYXkp_FPCGVoB3Y0kcmRRV=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+        alt="Devouring Storms Banner"
+        class="hero-banner-img"
+        onerror="this.style.display='none'; document.querySelector('.hero-banner-fallback').style.display='flex';"/>
+      <div class="hero-banner-fallback" style="display:none;"></div>
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="glitch-container">
+          <h1 class="glitch" data-text="DEVOURING STORMS">DEVOURING STORMS</h1>
+        </div>
+        <h2 class="hero-sub">STUDIOS</h2>
+        <p class="hero-tagline">THE REWRITTEN MULTIVERSE — WHERE DARKNESS CONSUMES THE LIGHT</p>
+        <div class="hero-buttons">
+          <a href="pages/series.html" class="btn btn-primary">ENTER THE SERIES</a>
+          <a href="pages/videos.html" class="btn btn-secondary">WATCH NOW</a>
+          <a href="pages/massg.html" class="btn" style="border-color:#00d4ff;color:#00d4ff;">MASSG OS</a>
+        </div>
+        <div class="hero-storm-badge">
+          <span class="badge-text">⚡ 388 VIDEOS · MASSG ADD-ON SERIES · THE REWRITTEN MULTIVERSE ⚡</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">▼ SCROLL ▼</div>
+  </section>
+
+  <!-- OFFICIAL TRAILER -->
+  <section class="featured-section">
+    <div class="section-header">
+      <h2 class="section-title">🎬 OFFICIAL TRAILER</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="featured-video-wrapper">
+      <div class="video-glow-frame">
+        <iframe width="100%" height="500"
+          src="https://www.youtube.com/embed/FBxWsA4gYxY?rel=0&modestbranding=1"
+          title="DEVOURING STORMS | SERIES REVEAL | OFFICIAL TRAILER"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="featured-info">
+        <h3>DEVOURING STORMS | SERIES REVEAL</h3>
+        <p>Welcome to the introduction of DEVOURING STORMS — A Story Mode Related Minecraft Series. The MASSG Add-On / Java Mod is here. The Multiverse has been breached.</p>
+        <p style="color:#9980cc; font-size:0.88rem; margin-bottom:1.5rem;">Creator: Logan Wall · @REWRITTENTM · Devouring Storms Studios</p>
+        <a href="pages/series.html" class="btn btn-sm btn-primary">LEARN MORE ABOUT THE SERIES →</a>
+        <div style="margin-top:1rem;">
+          <a href="pages/massg.html" class="btn btn-sm" style="border-color:#00d4ff;color:#00d4ff;">ENTER MASSG OS →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAL NAV CARDS -->
+  <section class="portal-section">
+    <div class="section-header">
+      <h2 class="section-title">⚡ ENTER THE MULTIVERSE</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="portal-grid">
+      <a href="pages/series.html" class="portal-card">
+        <div class="portal-icon">🌩️</div>
+        <h3>THE SERIES</h3>
+        <p>Explore the Devouring Storms universe — characters, story arcs, and the REWRITTEN MULTIVERSE</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/videos.html" class="portal-card">
+        <div class="portal-icon">▶️</div>
+        <h3>VIDEOS</h3>
+        <p>Watch all videos — songs, teasers, short films, and more from the channel</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/music.html" class="portal-card">
+        <div class="portal-icon">🎵</div>
+        <h3>MUSIC / ALBUMS</h3>
+        <p>Full album archive — songs, tracklists, and the Fight of the Darkness collection</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/massg.html" class="portal-card massg-card">
+        <div class="portal-icon">💀</div>
+        <h3>MASSG OS</h3>
+        <p>Access the MASSG Operating System — classified files, restricted zones & the mod</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/lore.html" class="portal-card">
+        <div class="portal-icon">📖</div>
+        <h3>LORE DATABASE</h3>
+        <p>Deep dive into characters, events, and secrets of the Devouring Storms universe</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/news.html" class="portal-card">
+        <div class="portal-icon">📡</div>
+        <h3>NEWS & UPDATES</h3>
+        <p>Latest drops, announcements, and lore reveals from Devouring Storms Studios</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/community.html" class="portal-card">
+        <div class="portal-icon">👥</div>
+        <h3>COMMUNITY</h3>
+        <p>Join the Devouring Storms community — Discord, YouTube subscribers, fan content</p>
+        <span class="portal-arrow">→</span>
+      </a>
+      <a href="pages/vault.html" class="portal-card vault-card">
+        <div class="portal-icon">🔒</div>
+        <h3>THE VAULT</h3>
+        <p>RESTRICTED ACCESS — Enter your clearance code to access classified content</p>
+        <span class="portal-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- LATEST SONGS PREVIEW -->
+  <section class="songs-section">
+    <div class="section-header">
+      <h2 class="section-title">🎵 LATEST SONGS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="songs-grid">
+      <div class="song-card" onclick="openVideo('IE3kARyxYqU')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/IE3kARyxYqU/maxresdefault.jpg" alt="A World Of Broken Secrets" onerror="this.src='https://img.youtube.com/vi/IE3kARyxYqU/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info">
+          <h4>A WORLD OF BROKEN SECRETS</h4>
+          <span>Rewritten Version · Album 2</span>
+        </div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+      <div class="song-card" onclick="openVideo('AKRq0qG097k')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/AKRq0qG097k/maxresdefault.jpg" alt="Changed Forever" onerror="this.src='https://img.youtube.com/vi/AKRq0qG097k/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info">
+          <h4>CHANGED FOREVER</h4>
+          <span>Album 2 · Fight of the Darkness</span>
+        </div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+      <div class="song-card" onclick="openVideo('ZTktckS8nfs')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/ZTktckS8nfs/maxresdefault.jpg" alt="The Infinity Battle" onerror="this.src='https://img.youtube.com/vi/ZTktckS8nfs/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info">
+          <h4>THE INFINITY BATTLE</h4>
+          <span>MASSG ADD-ON / MCJE-MOD</span>
+        </div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+      <div class="song-card" onclick="openVideo('aU334RQgpLM')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/aU334RQgpLM/maxresdefault.jpg" alt="A Universe of Distant Stars" onerror="this.src='https://img.youtube.com/vi/aU334RQgpLM/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info">
+          <h4>A UNIVERSE OF DISTANT STARS</h4>
+          <span>MASSG ADD-ON / MCJE-MOD</span>
+        </div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+    </div>
+    <div class="center-btn">
+      <a href="pages/music.html" class="btn btn-secondary">VIEW FULL ALBUM ARCHIVE →</a>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="about-content">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="about-logo"/>
+      <div class="about-text">
+        <h3>WHO IS LOGAN WALL?</h3>
+        <p>I'm Logan Wall, A.K.A. Rewritten Team Member — Creator of the <strong>MASSG Mod</strong> and the <strong>Devouring Storms Series</strong>. Welcome to the REWRITTEN MULTIVERSE, a Minecraft-based story universe where every secret has a consequence.</p>
+        <a href="https://www.youtube.com/@REWRITTENTM?sub_confirmation=1" target="_blank" class="btn btn-primary">SUBSCRIBE ON YOUTUBE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST NEWS STRIP -->
+  <section style="background:var(--storm-mid); padding:4rem 2rem;">
+    <div class="section-header">
+      <h2 class="section-title">📡 LATEST UPDATES</h2>
+      <div class="section-line"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; max-width:1100px; margin:0 auto 2rem;">
+      <div class="news-card">
+        <div class="news-date">MAY 24, 2026</div>
+        <h3>SERIES REVEAL TRAILER — LIVE</h3>
+        <p>The official Devouring Storms Series Reveal Trailer is now live on YouTube. 388 videos and counting — the multiverse is open.</p>
+        <span class="news-tag n-announce">ANNOUNCEMENT</span>
+      </div>
+      <div class="news-card">
+        <div class="news-date">MAY 22, 2026</div>
+        <h3>ALBUM 2 — FIGHT OF THE DARKNESS</h3>
+        <p>Album 2 drops are underway. New songs "Changed Forever" and "A World of Broken Secrets (Rewritten)" are now released.</p>
+        <span class="news-tag n-update">MUSIC DROP</span>
+      </div>
+      <div class="news-card">
+        <div class="news-date">MAY 20, 2026</div>
+        <h3>MASSG OS SITE LAUNCHED</h3>
+        <p>The MASSG Operating System page is now live. Access classified files, moveable windows, and restricted vault content.</p>
+        <span class="news-tag n-lore">LORE DROP</span>
+      </div>
+    </div>
+    <div class="center-btn">
+      <a href="pages/news.html" class="btn btn-secondary">ALL NEWS & UPDATES →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/>
+        <span>DEVOURING STORMS STUDIOS</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="pages/series.html">Series</a>
+        <a href="pages/videos.html">Videos</a>
+        <a href="pages/music.html">Music</a>
+        <a href="pages/massg.html">MASSG OS</a>
+        <a href="pages/lore.html">Lore</a>
+        <a href="pages/news.html">News</a>
+        <a href="pages/community.html">Community</a>
+        <a href="pages/vault.html">Vault</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a>
+        <a href="#discord" class="social-btn dc">💬 Discord — Add Invite Link</a>
+      </div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · REWRITTEN MULTIVERSE · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

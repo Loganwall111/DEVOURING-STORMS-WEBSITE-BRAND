@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music / Albums — Devouring Storms Studios</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    .album-block { background:var(--storm-card); border:1px solid var(--storm-border); border-radius:10px; overflow:hidden; max-width:960px; margin:0 auto 4rem; }
+    .album-header { padding:2rem 2.5rem; background:linear-gradient(135deg,rgba(139,0,255,0.18),rgba(0,212,255,0.06)); border-bottom:1px solid var(--storm-border); display:flex; gap:2rem; align-items:center; flex-wrap:wrap; }
+    .album-badge { width:90px; height:90px; border-radius:8px; background:linear-gradient(135deg,var(--storm-purple),var(--storm-dark-purple)); display:flex; align-items:center; justify-content:center; font-size:2.5rem; flex-shrink:0; box-shadow:var(--storm-glow); }
+    .album-info h2 { font-family:var(--font-title); font-size:1.6rem; letter-spacing:4px; color:#fff; margin-bottom:0.3rem; }
+    .album-info p { color:var(--text-dim); font-size:0.88rem; letter-spacing:2px; }
+    .track-list { padding:1.5rem 2.5rem 2rem; }
+    .track { display:flex; align-items:center; gap:1.2rem; padding:0.9rem 0; border-bottom:1px solid rgba(42,26,74,0.5); cursor:pointer; transition:background 0.2s; border-radius:4px; padding-left:0.5rem; padding-right:0.5rem; }
+    .track:last-child { border-bottom:none; }
+    .track:hover { background:rgba(139,0,255,0.08); }
+    .track-num { font-family:var(--font-mono); font-size:0.78rem; color:rgba(153,128,204,0.4); width:24px; text-align:right; flex-shrink:0; }
+    .track:hover .track-num { color:var(--storm-purple); }
+    .track-thumb { width:48px; height:48px; border-radius:4px; overflow:hidden; flex-shrink:0; background:var(--storm-mid); }
+    .track-thumb img { width:100%; height:100%; object-fit:cover; }
+    .track-title { flex:1; }
+    .track-title h4 { font-family:var(--font-title); font-size:0.88rem; letter-spacing:1.5px; color:#fff; margin-bottom:0.2rem; }
+    .track-title span { font-size:0.75rem; color:var(--text-dim); }
+    .track-dur { font-family:var(--font-mono); font-size:0.78rem; color:var(--text-dim); }
+    .track-play { width:34px; height:34px; background:rgba(139,0,255,0.2); border:1px solid rgba(139,0,255,0.4); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:var(--storm-light-purple); flex-shrink:0; transition:all 0.2s; }
+    .track:hover .track-play { background:var(--storm-purple); color:#fff; box-shadow:var(--storm-glow); }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="series.html">THE SERIES</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="music.html" class="active">MUSIC</a></li>
+      <li><a href="lore.html">LORE</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1 class="page-title">🎵 MUSIC / ALBUMS</h1>
+      <p class="page-subtitle">The Devouring Storms Discography — Every Song, Every Drop</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">ALBUM 2 — FIGHT OF THE DARKNESS</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="album-block">
+      <div class="album-header">
+        <div class="album-badge">⚡</div>
+        <div class="album-info">
+          <h2>FIGHT OF THE DARKNESS</h2>
+          <p>ALBUM 2 · 2026 · DEVOURING STORMS STUDIOS · REWRITTEN MULTIVERSE</p>
+        </div>
+      </div>
+      <div class="track-list">
+        <div class="track" onclick="openVideo('AKRq0qG097k')">
+          <span class="track-num">01</span>
+          <div class="track-thumb"><img src="https://img.youtube.com/vi/AKRq0qG097k/default.jpg" alt="" onerror="this.style.display='none'"/></div>
+          <div class="track-title"><h4>CHANGED FOREVER</h4><span>Fight of the Darkness · Album 2</span></div>
+          <span class="track-dur">3:12</span>
+          <div class="track-play">▶</div>
+        </div>
+        <div class="track" onclick="openVideo('IE3kARyxYqU')">
+          <span class="track-num">02</span>
+          <div class="track-thumb"><img src="https://img.youtube.com/vi/IE3kARyxYqU/default.jpg" alt="" onerror="this.style.display='none'"/></div>
+          <div class="track-title"><h4>A WORLD OF BROKEN SECRETS (REWRITTEN VERSION)</h4><span>Fight of the Darkness · Album 2</span></div>
+          <span class="track-dur">4:56</span>
+          <div class="track-play">▶</div>
+        </div>
+        <div class="track" onclick="openVideo('ZTktckS8nfs')">
+          <span class="track-num">03</span>
+          <div class="track-thumb"><img src="https://img.youtube.com/vi/ZTktckS8nfs/default.jpg" alt="" onerror="this.style.display='none'"/></div>
+          <div class="track-title"><h4>THE INFINITY BATTLE</h4><span>MASSG ADD-ON / MCJE-MOD</span></div>
+          <span class="track-dur">4:42</span>
+          <div class="track-play">▶</div>
+        </div>
+        <div class="track" onclick="openVideo('aU334RQgpLM')">
+          <span class="track-num">04</span>
+          <div class="track-thumb"><img src="https://img.youtube.com/vi/aU334RQgpLM/default.jpg" alt="" onerror="this.style.display='none'"/></div>
+          <div class="track-title"><h4>A UNIVERSE OF DISTANT STARS</h4><span>MASSG ADD-ON / MCJE-MOD</span></div>
+          <span class="track-dur">3:27</span>
+          <div class="track-play">▶</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title">FEATURED SONG — WATCH NOW</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div style="max-width:900px; margin:0 auto 4rem;">
+      <div class="video-glow-frame">
+        <iframe width="100%" height="480"
+          src="https://www.youtube.com/embed/IE3kARyxYqU?rel=0&modestbranding=1"
+          title="A World of Broken Secrets Rewritten"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center; color:var(--text-dim); margin-top:1rem; font-size:0.85rem; letter-spacing:2px;">▲ A WORLD OF BROKEN SECRETS — REWRITTEN VERSION</p>
+    </div>
+
+    <!-- Older songs strip -->
+    <div class="section-header">
+      <h2 class="section-title">MORE SONGS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="songs-grid" style="max-width:1200px; margin:0 auto 3rem;">
+      <div class="song-card" onclick="openVideo('AKRq0qG097k')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/AKRq0qG097k/maxresdefault.jpg" alt="Changed Forever" onerror="this.src='https://img.youtube.com/vi/AKRq0qG097k/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info"><h4>CHANGED FOREVER</h4><span>Album 2 · Fight of the Darkness</span></div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+      <div class="song-card" onclick="openVideo('ZTktckS8nfs')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/ZTktckS8nfs/maxresdefault.jpg" alt="The Infinity Battle" onerror="this.src='https://img.youtube.com/vi/ZTktckS8nfs/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info"><h4>THE INFINITY BATTLE</h4><span>MASSG ADD-ON / MCJE-MOD</span></div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+      <div class="song-card" onclick="openVideo('aU334RQgpLM')" style="cursor:pointer;">
+        <div class="song-thumb">
+          <img src="https://img.youtube.com/vi/aU334RQgpLM/maxresdefault.jpg" alt="A Universe of Distant Stars" onerror="this.src='https://img.youtube.com/vi/aU334RQgpLM/hqdefault.jpg'"/>
+          <div class="song-play">▶</div>
+        </div>
+        <div class="song-info"><h4>A UNIVERSE OF DISTANT STARS</h4><span>MASSG ADD-ON / MCJE-MOD</span></div>
+        <span class="song-watch">PLAY ▶</span>
+      </div>
+    </div>
+    <div class="center-btn">
+      <a href="https://www.youtube.com/@REWRITTENTM/videos" target="_blank" class="btn btn-secondary">ALL SONGS ON YOUTUBE →</a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/><span>DEVOURING STORMS STUDIOS</span></div>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="series.html">Series</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="massg.html">MASSG OS</a><a href="lore.html">Lore</a><a href="news.html">News</a><a href="community.html">Community</a><a href="vault.html">Vault</a></div>
+      <div class="footer-social"><a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a><a href="#discord" class="social-btn dc">💬 Discord</a></div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>

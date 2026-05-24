@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News & Updates — Devouring Storms Studios</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="series.html">THE SERIES</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="lore.html">LORE</a></li>
+      <li><a href="news.html" class="active">NEWS</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1 class="page-title">📡 NEWS & UPDATES</h1>
+      <p class="page-subtitle">Latest Drops, Lore Reveals & Announcements</p>
+    </div>
+  </div>
+
+  <section>
+    <!-- Filter -->
+    <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:2.5rem; justify-content:center;">
+      <button onclick="filterNews('all')" class="btn btn-primary nf-btn" data-f="all">ALL</button>
+      <button onclick="filterNews('announce')" class="btn btn-secondary nf-btn" data-f="announce">📢 ANNOUNCEMENTS</button>
+      <button onclick="filterNews('lore')" class="btn btn-secondary nf-btn" data-f="lore">📖 LORE DROPS</button>
+      <button onclick="filterNews('update')" class="btn btn-secondary nf-btn" data-f="update">🔄 UPDATES</button>
+      <button onclick="filterNews('warning')" class="btn btn-secondary nf-btn" data-f="warning">⚠ WARNINGS</button>
+    </div>
+
+    <div class="news-grid" id="newsGrid" style="max-width:1200px; margin:0 auto;">
+
+      <div class="news-card" data-ntype="announce">
+        <div class="news-date">MAY 24, 2026</div>
+        <h3>🎬 SERIES REVEAL TRAILER — NOW LIVE</h3>
+        <p>The official Devouring Storms Series Reveal Trailer is live on YouTube. 388 videos and counting — the multiverse is fully open. Watch the trailer on the home page or the Series page.</p>
+        <span class="news-tag n-announce">ANNOUNCEMENT</span>
+      </div>
+
+      <div class="news-card" data-ntype="update">
+        <div class="news-date">MAY 24, 2026</div>
+        <h3>🌐 DEVOURING STORMS SITE LAUNCHED</h3>
+        <p>The full Devouring Storms Studios website is now live — 9 pages including the MASSG OS with moveable windows, the Vault, Lore Database, Music Archive, and more.</p>
+        <span class="news-tag n-update">SITE UPDATE</span>
+      </div>
+
+      <div class="news-card" data-ntype="update">
+        <div class="news-date">MAY 22, 2026</div>
+        <h3>🎵 ALBUM 2 — FIGHT OF THE DARKNESS DROPS</h3>
+        <p>"Changed Forever" and "A World of Broken Secrets (Rewritten Version)" are both live. Album 2 tracklist is filling in — check the Music page for the full archive.</p>
+        <span class="news-tag n-update">MUSIC DROP</span>
+      </div>
+
+      <div class="news-card" data-ntype="lore">
+        <div class="news-date">MAY 20, 2026</div>
+        <h3>📖 MASSG OS — OPERATIONAL</h3>
+        <p>The MASSG Operating System is now accessible. Open the MASSG OS page for moveable windows, a live terminal, classified files, storm sensor data, and vault access.</p>
+        <span class="news-tag n-lore">LORE DROP</span>
+      </div>
+
+      <div class="news-card" data-ntype="warning">
+        <div class="news-date">MAY 18, 2026</div>
+        <h3>⚠ BREACH COUNT: 7 OF 12 TIMELINES</h3>
+        <p>Storm sensor data shows 7 of 12 known timelines have been consumed by the Devouring Storm. The Rewritten Multiverse is the last confirmed active timeline. MASSG containment is holding — for now.</p>
+        <span class="news-tag n-warning">STORM WARNING</span>
+      </div>
+
+      <div class="news-card" data-ntype="lore">
+        <div class="news-date">MAY 15, 2026</div>
+        <h3>🎬 GENESIS BREACH PRELUDE — SHORT FILM</h3>
+        <p>The Genesis Breach Prelude short film (23:16) is now live. This is Arc 01 of the Devouring Storms universe — the moment the multiverse was first torn open. Watch it on the Series page.</p>
+        <span class="news-tag n-lore">LORE DROP</span>
+      </div>
+
+      <div class="news-card" data-ntype="announce">
+        <div class="news-date">MAY 10, 2026</div>
+        <h3>💀 MASSG ADD-ON TRAILER — OFFICIAL</h3>
+        <p>The MASSG Add-On / Java Mod official trailer is live on YouTube. The mod is in active development for both Bedrock Edition (Add-On) and Java Edition. Watch it on the Series page.</p>
+        <span class="news-tag n-announce">ANNOUNCEMENT</span>
+      </div>
+
+      <div class="news-card" data-ntype="update">
+        <div class="news-date">MAY 5, 2026</div>
+        <h3>⚡ THE INFINITY BATTLE + UNIVERSE OF DISTANT STARS</h3>
+        <p>Two new songs released — "The Infinity Battle" and "A Universe of Distant Stars." Both document the Arc 04 Infinity Conflict and are now in the music archive.</p>
+        <span class="news-tag n-update">MUSIC DROP</span>
+      </div>
+
+      <div class="news-card" data-ntype="warning">
+        <div class="news-date">COMING SOON</div>
+        <h3>🔒 VAULT — NEW CLASSIFIED FILES INCOMING</h3>
+        <p>New classified files will be added to the Vault soon. If you have Alpha clearance, check back regularly. The Final Storm Arc documentation is being compiled.</p>
+        <span class="news-tag n-warning">UPCOMING</span>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/><span>DEVOURING STORMS STUDIOS</span></div>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="series.html">Series</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="massg.html">MASSG OS</a><a href="lore.html">Lore</a><a href="news.html">News</a><a href="community.html">Community</a><a href="vault.html">Vault</a></div>
+      <div class="footer-social"><a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a><a href="#discord" class="social-btn dc">💬 Discord</a></div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+  <script src="../assets/main.js"></script>
+  <script>
+    function filterNews(type) {
+      document.querySelectorAll('.news-card').forEach(c => {
+        c.style.display = (type==='all' || c.dataset.ntype===type) ? 'block' : 'none';
+      });
+      document.querySelectorAll('.nf-btn').forEach(b => {
+        b.classList.toggle('btn-primary', b.dataset.f===type);
+        b.classList.toggle('btn-secondary', b.dataset.f!==type);
+      });
+    }
+  </script>
+</body>
+</html>

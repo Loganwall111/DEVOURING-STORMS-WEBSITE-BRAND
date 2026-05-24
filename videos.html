@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos — Devouring Storms Studios</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo" class="nav-logo-img"/>
+      <span class="nav-logo-text">DEVOURING STORMS</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="series.html">THE SERIES</a></li>
+      <li><a href="videos.html" class="active">VIDEOS</a></li>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="lore.html">LORE</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="vault.html" class="vault-nav-link">💀 MASSG OS</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1 class="page-title">▶ VIDEOS</h1>
+      <p class="page-subtitle">388 Videos — Songs, Teasers, Short Films & More</p>
+    </div>
+  </div>
+
+  <section>
+    <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:2.5rem; justify-content:center;">
+      <button onclick="filterVideos('all')" class="btn btn-primary filter-btn" data-filter="all">ALL VIDEOS</button>
+      <button onclick="filterVideos('song')" class="btn btn-secondary filter-btn" data-filter="song">🎵 SONGS</button>
+      <button onclick="filterVideos('teaser')" class="btn btn-secondary filter-btn" data-filter="teaser">📡 TEASERS</button>
+      <button onclick="filterVideos('film')" class="btn btn-secondary filter-btn" data-filter="film">🎬 SHORT FILMS</button>
+      <button onclick="filterVideos('trailer')" class="btn btn-secondary filter-btn" data-filter="trailer">⚡ TRAILERS</button>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+
+      <!-- TRAILERS -->
+      <div class="video-card" data-type="trailer" onclick="openVideo('FBxWsA4gYxY')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/FBxWsA4gYxY/maxresdefault.jpg" alt="Series Reveal Trailer" onerror="this.src='https://img.youtube.com/vi/FBxWsA4gYxY/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div>
+          <span class="duration">3:26</span>
+        </div>
+        <div class="card-info">
+          <h4>DEVOURING STORMS | SERIES REVEAL | OFFICIAL TRAILER</h4>
+          <div class="meta"><span>437 views</span><span>3 weeks ago</span></div>
+          <span class="tag TRAILER">TRAILER</span>
+        </div>
+      </div>
+
+      <!-- SHORT FILMS -->
+      <div class="video-card" data-type="film" onclick="openVideo('82cX7ZCS3G4')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/82cX7ZCS3G4/maxresdefault.jpg" alt="Genesis Breach Prelude" onerror="this.src='https://img.youtube.com/vi/82cX7ZCS3G4/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div>
+          <span class="duration">23:16</span>
+        </div>
+        <div class="card-info">
+          <h4>DEVOURING STORMS: Genesis Breach Prelude (Short Film)</h4>
+          <div class="meta"><span>13 views</span><span>5 days ago</span></div>
+          <span class="tag film">SHORT FILM</span>
+        </div>
+      </div>
+
+      <!-- SONGS -->
+      <div class="video-card" data-type="song" onclick="openVideo('IE3kARyxYqU')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/IE3kARyxYqU/maxresdefault.jpg" alt="World of Broken Secrets" onerror="this.src='https://img.youtube.com/vi/IE3kARyxYqU/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">4:56</span>
+        </div>
+        <div class="card-info">
+          <h4>A WORLD OF BROKEN SECRETS REWRITTEN VERSION | ALBUM 2</h4>
+          <div class="meta"><span>9 views</span><span>1 day ago</span></div>
+          <span class="tag song">SONG</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-type="song" onclick="openVideo('AKRq0qG097k')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/AKRq0qG097k/maxresdefault.jpg" alt="Changed Forever" onerror="this.src='https://img.youtube.com/vi/AKRq0qG097k/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">3:12</span>
+        </div>
+        <div class="card-info">
+          <h4>CHANGED FOREVER | ALBUM 2 FIGHT OF THE DARKNESS</h4>
+          <div class="meta"><span>5 views</span><span>1 day ago</span></div>
+          <span class="tag song">SONG</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-type="song" onclick="openVideo('ZTktckS8nfs')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/ZTktckS8nfs/maxresdefault.jpg" alt="The Infinity Battle" onerror="this.src='https://img.youtube.com/vi/ZTktckS8nfs/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">4:42</span>
+        </div>
+        <div class="card-info">
+          <h4>THE INFINITY BATTLE | A DEVOURING STORMS SONG</h4>
+          <div class="meta"><span>22 views</span><span>3 weeks ago</span></div>
+          <span class="tag song">SONG</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-type="song" onclick="openVideo('aU334RQgpLM')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/aU334RQgpLM/maxresdefault.jpg" alt="Universe of Distant Stars" onerror="this.src='https://img.youtube.com/vi/aU334RQgpLM/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">3:27</span>
+        </div>
+        <div class="card-info">
+          <h4>A UNIVERSE OF DISTANT STARS | A DEVOURING STORMS SONG</h4>
+          <div class="meta"><span>28 views</span><span>3 weeks ago</span></div>
+          <span class="tag song">SONG</span>
+        </div>
+      </div>
+
+      <!-- TEASERS -->
+      <div class="video-card" data-type="teaser" onclick="openVideo('82cX7ZCS3G4')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/82cX7ZCS3G4/maxresdefault.jpg" alt="Something Is Coming" onerror="this.src='https://img.youtube.com/vi/82cX7ZCS3G4/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">1:21</span>
+        </div>
+        <div class="card-info">
+          <h4>SOMETHING IS COMING... | Devouring Storms Official Teaser</h4>
+          <div class="meta"><span>13 views</span><span>2 days ago</span></div>
+          <span class="tag teaser">TEASER</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-type="song" onclick="openVideo('82cX7ZCS3G4')">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/82cX7ZCS3G4/maxresdefault.jpg" alt="Placeholder" onerror="this.src='https://img.youtube.com/vi/82cX7ZCS3G4/hqdefault.jpg'"/>
+          <div class="play-btn">▶</div><span class="duration">?:??</span>
+        </div>
+        <div class="card-info">
+          <h4>THE REALITY BLEED | MASSG Add-on Teaser</h4>
+          <div class="meta"><span>10 views</span><span>2 weeks ago</span></div>
+          <span class="tag teaser">TEASER</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="center-btn" style="margin-top:3rem;">
+      <a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="btn btn-primary">VIEW ALL ON YOUTUBE →</a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lqG3QZYuULgmHPAKKWaYL5qfkdBvHN9V5wjGSBXl4=s176-c-k-c0x00ffffff-no-rj" alt="Logo"/><span>DEVOURING STORMS STUDIOS</span></div>
+      <div class="footer-links"><a href="../index.html">Home</a><a href="series.html">Series</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="massg.html">MASSG OS</a><a href="lore.html">Lore</a><a href="news.html">News</a><a href="community.html">Community</a><a href="vault.html">Vault</a></div>
+      <div class="footer-social"><a href="https://www.youtube.com/@REWRITTENTM" target="_blank" class="social-btn yt">▶ YOUTUBE</a><a href="#discord" class="social-btn dc">💬 Discord</a></div>
+      <p class="footer-copy">© 2026 DEVOURING STORMS STUDIOS · Logan Wall (@REWRITTENTM)</p>
+    </div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>
